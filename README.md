@@ -59,7 +59,7 @@
 |    李佳壕    |  [xljh0520](https://github.com/xljh0520/)   |    后台    |
 | xyk的弟中弟  | [tenkinoko](https://github.com/tenkinoko/)  |    前端    |
 | 没有肝的圆圆 | [Elterelley](https://github.com/Elterelley) |   UI设计   |
-|     阿睿     |  [pilorayyy](https://github.com/pilorayyy)  |    后台    |
+|     阿睿     |  [pilorayyy](https://github.com/pilorayyy)  |    前端    |
 
 # 版权信息
 本项目使用`Apache License 2.0`，任何个人与组织均可以以任意形式使用本项目（包括商用）而无需原作者许可，但是在使用时必须同时附带[Apache License 2.0](https://raw.githubusercontent.com/MilkyBoat/NetDisk/master/LICENSE)协议。
