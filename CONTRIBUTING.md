@@ -27,3 +27,11 @@
 ## Git GUI
 + Github Desktop
 
+# 项目贡献者
+
++ 徐云凯[MilkyBoat](https://github.com/MilkyBoat/)
++ xyk的小弟[NebulaJZ](https://github.com/NebulaJZ/)
++ 李佳壕[xljh0520](https://github.com/xljh0520/)
++ xyk的弟中弟[tenkinoko](https://github.com/tenkinoko/)
++ 没有肝的圆圆[Elterelley](https://github.com/Elterelley)
++ 阿睿[pilorayyy](https://github.com/pilorayyy)
