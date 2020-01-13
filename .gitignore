@@ -17,7 +17,6 @@ selenium-debug.log
 *.suo
 *.ntvs*
 *.njsproj
-# *.imi
 *.sln
 
 # Some other dev files
