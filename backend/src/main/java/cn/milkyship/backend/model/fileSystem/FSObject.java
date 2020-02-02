@@ -9,5 +9,18 @@ package cn.milkyship.backend.model.fileSystem;
  * @author 徐云凯
  * @version v1.0
  */
-public abstract class FSObject {
+public class FSObject {
+	
+	private String name;
+	private String path;
+	
+	
+	
+	public void save(String path){}
+	
+	public void del(String path){}
+	
+	public void find(){}
+	
+	
 }
