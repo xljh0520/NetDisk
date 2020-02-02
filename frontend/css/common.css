@@ -1,0 +1,111 @@
+.w {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+#layoutHeader {
+    height: 60px;
+    background-color: #d5d8e9;
+}
+#layoutHeader .shortcut li:hover{
+    background-color: #4b5388;
+}
+#layoutHeader .shortcut {
+    float: right;
+    height: 100%;
+    width: 1256px;
+}
+
+#layoutHeader .shortcut .shortcutItem {
+    display: inline-block;
+    background-color: #222852;
+    font-size: 40px;
+    height: 60px;
+    line-height: 45px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+}
+
+#layoutHeader .shortcut .ano img {
+    margin-left: 805px;
+    margin-right: 0;
+}
+
+#layoutHeader .shortcut .shortcutItem a {
+    color: #fff;
+    font-weight: 250;
+    font-size: 20px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#layoutHeader .userInfo {
+    background-color: #222852;
+    height: 100%;
+    width: 277px;
+}
+
+#layoutHeader .userInfo .user .user-photo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    background-image: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-position-x: center;
+    background-position-y: center;
+    border-radius: 50%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+#layoutHeader .userInfo .user .user-photo-box {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    margin-right: 9px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#layoutHeader .userInfo .user .user-name {
+    font-size: 12px;
+    color: #fff;
+    margin-left: 5px;
+    position: absolute;
+    top: 9px;
+}
+#main{
+    background-color:#d5d8e9;
+    height: 990px;
+}
+#main .sideLayout{
+    width: 277px;
+    height: 100%;
+    background-color: #5968d3;
+}
+#main .sideLayout .allFile li{
+    height: 56px;
+    width: 100%;
+    line-height: 56px;
+}
+#main .sideLayout .allFile li:hover{
+    background-color: #848cc6;
+}
+#main .sideLayout .allFile li a{
+    font-size: 18px;
+    color: #fff;
+}
+#main .sideLayout .allFile .textT{
+    margin-left: 25px;
+}
+#main .sideLayout .allFile .text{
+    margin-left: 80px;
+}
