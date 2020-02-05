@@ -1,107 +1,128 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>小辣稽网盘</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="shortcut icon" href="" />
-  </head>
-  <body style="overflow:hidden">
-    <div id="layoutHeader">
-      <ul class="shortcut" node-type="header-link">
-          <li class="shortcutItem" node-type="disk-home">
-              <a href="" target="_self" title="网盘">网盘</a>
-          </li>
-          <li class="shortcutItem">
-              <a href="" target="_self" title="分享">分享</a>
-          </li>
-          <li class="shortcutItem">
-              <a href="" target="_self" title="群组">群组</a>
-          </li>
-          <li class="shortcutItem">
-              <a href="" target="_self" title="更多">更多</a>
-          </li>
-          <li class="shortcutItem ano">
-              <a href="">
-                  <img src="../frontend_dieigned/01设置按钮.png" width="25" height="25">
-              </a>
-          </li>
-      </ul>
-      <dd class="userInfo" node-type="header-apps">
-          <span class="user" node-type="app-user-info">
-              <span class="user-photo-box">
-                  <i class="user-photo"
-                      style="background-image:url();filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='', sizingMethod='scale');"></i>
-              </span>
-              <span class="user-name">嘎？
-              </span>
-          </span>
-      </dd>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>小辣稽网盘</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="shortcut icon" href="" />
+</head>
+
+<body style="overflow:hidden">
+  <div id="layoutHeader">
+    <ul class="shortcut" node-type="header-link">
+      <li class="shortcutItem" node-type="disk-home">
+        <a href="" target="_self" title="网盘">网盘</a>
+      </li>
+      <li class="shortcutItem">
+        <a href="" target="_self" title="分享">分享</a>
+      </li>
+      <li class="shortcutItem">
+        <a href="" target="_self" title="群组">群组</a>
+      </li>
+      <li class="shortcutItem">
+        <a href="" target="_self" title="更多">更多</a>
+      </li>
+      <li class="shortcutItem ano">
+        <a href="">
+          <img src="../frontend_dieigned/01设置按钮.png" width="25" height="25">
+        </a>
+      </li>
+    </ul>
+    <dd class="userInfo" node-type="header-apps">
+      <span class="user" node-type="app-user-info">
+        <span class="user-photo-box">
+          <i class="user-photo"
+            style="background-image:url();filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='', sizingMethod='scale');"></i>
+        </span>
+        <span class="user-name">嘎？
+        </span>
+      </span>
+      <div class="capacity"
+        style="visibility:visible;position: relative;float:right;height: 30px;width: 203px;top: 26px;">
+        <div class="capacityBox" style="width: 100%;height: 25px;">
+          <ul class="showCapacity">
+            <li class="bar">
+              <div class="numSpace">空间:&nbsp&nbsp已用
+                  <span class="usedSpace"></span>
+                  ，剩余
+                  <span class="leftSpace"></span class="leftSpace">
+              </div>
+              <div class="space">
+                <span class="space_span"
+                  style="background: rgb(12, 219, 115);transition-duration:1s;width:60%;"></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </dd>
   </div>
   <div id="main">
-      <div class="sideLayout">
-          <ul class="allFile">
-              <li>
-                  <a href="" >
-                      <span class="textT">
-                          <span><img src="../frontend_dieigned/01全部文件图标.png" ::before></span>
-                          <span>全部文件</span>
-                      </span>
-                  </a>
-              </li>
-              <li>
-                  <a href="">
-                      <span class="text">
-                          <span>图片</span>
-                      </span>
-                  </a>
-              </li>
-              <li>
-                  <a href="">
-                      <span class="text">
-                          <span>文档</span>
-                      </span>
-                  </a>
-              </li>
-              <li>
-                  <a href="">
-                      <span class="text">
-                          <span>视频</span>
-                      </span>
-                  </a>
-              </li>
-              <li>
-                  <a href="">
-                      <span class="text">
-                          <span>音频</span>
-                      </span>
-                  </a>
-              </li>
-              <li>
-                  <a href="">
-                  <span class="text">
-                      <span>其他</span>
-                  </span>
-                  </a>
-              </li>
-              <li>
-                  <a href="" >
-                      <span class="textT">
-                          <span><img src="../frontend_dieigned/01回收站图标.png" ::before></span>
-                          <span>回收站</span>
-                      </span>
-                  </a>
-              </li>
-          </ul>
+    <div class="sideLayout">
+      <ul class="allFile">
+        <li>
+          <a href="">
+            <span class="textT">
+              <span><img src="../frontend_dieigned/01全部文件图标.png" ::before></span>
+              <span>全部文件</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="text">
+              <span>图片</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="text">
+              <span>文档</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="text">
+              <span>视频</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="text">
+              <span>音频</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="text">
+              <span>其他</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="textT">
+              <span><img src="../frontend_dieigned/01回收站图标.png" ::before></span>
+              <span>回收站</span>
+            </span>
+          </a>
+        </li>
+      </ul>
 
-      </div>
-      <div class="main-frame" >
+    </div>
+    <div class="main-frame">
 
-      </div>
+    </div>
   </div>
-  </body>
+</body>
+
 </html>
