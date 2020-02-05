@@ -9,18 +9,57 @@ package cn.milkyship.backend.model.fileSystem;
  * @author 徐云凯
  * @version v1.0
  */
+
+import java.lang.reflect.Array;
+import java.util.List;
+
 public class FSObject {
 	
-	private String name;
-	private String path;
+	private int id;
+	private String fileName;
+	private int owner;
+	private int parent;
+	private String filePath;
 	
+	public FSObject(){};
 	
+	public int getId() {
+		return id;
+	}
 	
-	public void save(String path){}
+	public void setId(int id) {
+		this.id = id;
+	}
 	
-	public void del(String path){}
+	public String getFileName() {
+		return fileName;
+	}
 	
-	public void find(){}
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
 	
+	public int getOwner() {
+		return owner;
+	}
 	
+	public void setOwner(int owner) {
+		this.owner = owner;
+	}
+	
+	public int getParent() {
+		return parent;
+	}
+	
+	public void setParent(int parent) {
+		this.parent = parent;
+	}
+	
+	public String getFilePath() {
+		return filePath;
+	}
+	
+	public void setFilePath(String filePath) {
+		this.filePath = filePath;
+	}
 }

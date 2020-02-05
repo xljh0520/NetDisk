@@ -10,4 +10,5 @@ package cn.milkyship.backend.fao;
  * @version v1.0
  */
 public class BaseFao {
+
 }
