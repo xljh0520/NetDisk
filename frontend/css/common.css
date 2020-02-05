@@ -45,6 +45,41 @@
     height: 100%;
     width: 277px;
 }
+#layoutHeader .userInfo .capacity .capacityBox ul{
+    display: block;
+    font-size: 5px;
+}
+
+#layoutHeader .userInfo .capacity .capacityBox .showCapacity{
+    color: #fff;
+}
+
+#layoutHeader .userInfo .capacity .capacityBox .showCapacity .bar .space{
+    height: 6px;
+    width: 180px;
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    line-height: 0;
+}
+#layoutHeader .userInfo .capacity .capacityBox .showCapacity .bar .space .space_span{
+    height: 6px;
+    width: 0;
+    line-height: 0;
+    _font-size: 0;
+    display: block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition-property: width;
+    transition-delay: .3s;
+    transition-timing-function: linear;
+}
 
 #layoutHeader .userInfo .user .user-photo {
     display: inline-block;
