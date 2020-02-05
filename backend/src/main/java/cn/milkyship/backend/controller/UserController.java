@@ -1,5 +1,7 @@
 package cn.milkyship.backend.controller;
 
+import org.springframework.stereotype.Controller;
+
 /*
  * <p>项目名称: netdisk </p>
  * <p>文件名称: UserController </p>
@@ -9,5 +11,8 @@ package cn.milkyship.backend.controller;
  * @author 徐云凯
  * @version v1.0
  */
+
+@Controller
 public class UserController {
+
 }
