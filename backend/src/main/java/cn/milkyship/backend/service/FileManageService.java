@@ -57,36 +57,40 @@ public class FileManageService {
 	}
 	
 	/***
-	 * @Title: copy
-	 * @Description: 同一用户下的文件复制
+	 * @title: copy
+	 * @description: 同一用户下的文件复制
 	 * @param ManipulatedFileId: 被操作的文件id
 	 * @param targetDirId: 目标文件夹id
 	 * @return void
 	 * @author  徐云凯
-	 * @Datetime  2020/2/6 14:39
+	 * @datetime  2020/2/6 14:39
 	 */
 	public int copy(int ManipulatedFileId, int targetDirId){
 		if(!fileDao.isDir(targetDirId)){return -1;}
 		
 		int ownerId = fileDao.findDir(targetDirId).getOwner();
 		
-		if(fileDao.isDir(ManipulatedFileId)){
+		if(fileDao.isDir(ManipulatedFileId)){   //被复制对象为文件夹
 			String ManipulatedDirName = fileDao.findDir(ManipulatedFileId).getFileName();
 			int re = mkdir(targetDirId, ManipulatedDirName);
 			
+			//复制被复制对象目录下的文件
 			List<NetFile> childrenFile = fileDao.findChildrenFile(ManipulatedFileId);
 			for(NetFile child:childrenFile){
-				//copy(chil);
-				//TODO:
+				NetFile childFile = new NetFile(child);
+				childFile.setParent(re);
+				childFile.setOwner(ownerId);
+				fileDao.add(childFile);
 			}
+			//复制被复制对象下的文件夹
 			List<NetDirectory> childrenDir = fileDao.findChildrenDir(ManipulatedFileId);
 			for(NetDirectory child:childrenDir){
-				mkdir(targetDirId, child.getFileName());
-				//TODO:
+				int dirId = mkdir(targetDirId, child.getFileName());
+				copy(child.getId(), dirId);
 			}
 			return re;
 		}
-		else{
+		else{   //被复制对象为文件
 			NetFile file = fileDao.findFile(ManipulatedFileId);
 			file.setParent(targetDirId);
 			file.setOwner(ownerId);

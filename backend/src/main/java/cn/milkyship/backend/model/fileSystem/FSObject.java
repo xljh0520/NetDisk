@@ -23,6 +23,14 @@ public class FSObject {
 	
 	public FSObject(){};
 	
+	public FSObject(FSObject fsObject){
+		this.id = fsObject.id;
+		this.fileName = fsObject.fileName;
+		this.owner = fsObject.owner;
+		this.parent = fsObject.parent;
+		this.filePath = fsObject.filePath;
+	}
+	
 	public int getId() {
 		return id;
 	}
