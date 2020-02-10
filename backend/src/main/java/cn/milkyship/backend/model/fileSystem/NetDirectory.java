@@ -13,4 +13,5 @@ public class NetDirectory extends FSObject {
 	
 	public NetDirectory(){}
 	
+	public NetDirectory(NetDirectory netDirectory){}
 }

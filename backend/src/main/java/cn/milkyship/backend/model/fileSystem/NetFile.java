@@ -15,6 +15,10 @@ public class NetFile extends FSObject {
 	
 	public NetFile(){};
 	
+	public NetFile(NetFile file){
+		this.MD5 = file.MD5;
+	}
+	
 	public String getMD5() {
 		return MD5;
 	}
