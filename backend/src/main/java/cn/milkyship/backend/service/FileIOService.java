@@ -26,9 +26,9 @@ public class FileIOService {
 		return fileIoObject.write(file, MD5);
 	}
 	
-	public File download(int fileId){
+	public File download(String fileId){
 		
-		if(fileDao.isDir(fileId))
+		if(fileDao.isDir(fileId)==1)
 			return null;
 		
 		NetFile netFile = fileDao.findFile(fileId);

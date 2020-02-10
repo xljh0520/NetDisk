@@ -12,22 +12,22 @@ import java.util.List;
 @Component
 public interface FileDao {
 
-	public boolean isDir(int FSObjId);
+	public int isDir(String FSObjId);
 	
-	public int add(NetDirectory dir);
+	public String add(NetDirectory dir);
 	
-	public int add(NetFile file);
+	public String add(NetFile file);
 	
-	public void del(int FileId);
+	public void del(String FileId);
 	
-	public FSObject find(int FSObjId);
+	public FSObject find(String FSObjId);
 	
-	public NetDirectory findDir(int DirId);
+	public NetDirectory findDir(String DirId);
 	
-	public NetFile findFile(int FileId);
+	public NetFile findFile(String FileId);
 	
-	public List<NetDirectory> findChildrenDir(int FSObjectId);
+	public List<NetDirectory> findChildrenDir(String FSObjectId);
 	
-	public List<NetFile> findChildrenFile(int FSObjectId);
+	public List<NetFile> findChildrenFile(String FSObjectId);
 	
 }

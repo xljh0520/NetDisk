@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @Component
@@ -18,13 +19,15 @@ public class FileManageService {
 	@Autowired
 	private FileDao fileDao;
 	
-	public int mkdir(int parentId, String fileName){
-		if(!fileDao.isDir(parentId)) {return -1;}
+	public String mkdir(String parentId, String fileName){
+		if(fileDao.isDir(parentId)==0) {return null;}
 		
 		NetDirectory parent = (NetDirectory)fileDao.findDir(parentId);
 		
 		NetDirectory netDirectory = new NetDirectory();
 		
+		String uuid = UUID.randomUUID().toString();
+		netDirectory.setId(uuid.replaceAll("-", ""));
 		netDirectory.setFileName(fileName);
 		netDirectory.setParent(parentId);
 		netDirectory.setOwner(parent.getOwner());
@@ -33,9 +36,9 @@ public class FileManageService {
 		return fileDao.add(netDirectory);
 	}
 	
-	public List<FSObject> findChild( int ManipulatedFileId){
+	public List<FSObject> findChild( String ManipulatedFileId){
 		List<FSObject> children = new ArrayList<>();
-		if(fileDao.isDir(ManipulatedFileId)){
+		if(fileDao.isDir(ManipulatedFileId)==1){
 			List<NetDirectory> childrenDir = fileDao.findChildrenDir(ManipulatedFileId);
 			if(childrenDir != null)
 				children.addAll(childrenDir);
@@ -49,9 +52,9 @@ public class FileManageService {
 		return children;
 	}
 	
-	public int cut(int ManipulatedFileId, int targetDirId){
-		if(!fileDao.isDir(targetDirId)){return -1;}
-		int re = copy(ManipulatedFileId, targetDirId);
+	public String cut(String ManipulatedFileId, String targetDirId){
+		if(fileDao.isDir(targetDirId)==0){return "";}
+		String re = copy(ManipulatedFileId, targetDirId);
 		del(ManipulatedFileId);
 		return re;
 	}
@@ -65,19 +68,21 @@ public class FileManageService {
 	 * @author  徐云凯
 	 * @datetime  2020/2/6 14:39
 	 */
-	public int copy(int ManipulatedFileId, int targetDirId){
-		if(!fileDao.isDir(targetDirId)){return -1;}
+	public String copy(String ManipulatedFileId, String targetDirId){
+		if(fileDao.isDir(targetDirId)==0){return null;}
 		
-		int ownerId = fileDao.findDir(targetDirId).getOwner();
+		String ownerId = fileDao.findDir(targetDirId).getOwner();
 		
-		if(fileDao.isDir(ManipulatedFileId)){   //被复制对象为文件夹
+		if(fileDao.isDir(ManipulatedFileId)==1){   //被复制对象为文件夹
 			String ManipulatedDirName = fileDao.findDir(ManipulatedFileId).getFileName();
-			int re = mkdir(targetDirId, ManipulatedDirName);
+			String re = mkdir(targetDirId, ManipulatedDirName);
 			
 			//复制被复制对象目录下的文件
 			List<NetFile> childrenFile = fileDao.findChildrenFile(ManipulatedFileId);
 			for(NetFile child:childrenFile){
 				NetFile childFile = new NetFile(child);
+				String uuid = UUID.randomUUID().toString();
+				childFile.setId(uuid.replaceAll("-", ""));
 				childFile.setParent(re);
 				childFile.setOwner(ownerId);
 				fileDao.add(childFile);
@@ -85,7 +90,7 @@ public class FileManageService {
 			//复制被复制对象下的文件夹
 			List<NetDirectory> childrenDir = fileDao.findChildrenDir(ManipulatedFileId);
 			for(NetDirectory child:childrenDir){
-				int dirId = mkdir(targetDirId, child.getFileName());
+				String dirId = mkdir(targetDirId, child.getFileName());
 				copy(child.getId(), dirId);
 			}
 			return re;
@@ -98,7 +103,7 @@ public class FileManageService {
 		}
 	}
 
-	public void del(int ManipulatedFileId){
+	public void del(String ManipulatedFileId){
 		List<FSObject> children = findChild(ManipulatedFileId);
 		for(FSObject child:children){
 			if(child instanceof NetFile){

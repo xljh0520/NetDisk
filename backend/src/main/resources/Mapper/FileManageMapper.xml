@@ -9,11 +9,24 @@
 		</discriminator>
 	</resultMap>
 
-	<select id="isDir" resultType="boolean">
-		SELECT isDir FROM fileList WHERE id=#{FSObjId}
+	<select id="isDir" resultType="int">
+		SELECT isDir FROM fileList WHERE uuid=#{FSObjId}
 	</select>
 
-<!--	<insert id="add"-->
+	<insert id="add" parameterType="NetDirectory">
+		INSERT INTO fileList(uuid, fileName, owner, MD5, parent, filePath, isDir)
+			VALUES (#{id}, #{fileName}, #{owner}, "", #{parent}, #{filePath}, 1)
+	</insert>
+
+	<insert id="add" parameterType="NetFile">
+		INSERT INTO fileList(uuid, fileName, owner, MD5, parent, filePath, isDir)
+			VALUES (#{id}, #{fileName}, #{owner}, #{MD5}, #{parent}, #{filePath}, 0)
+	</insert>
+
+	<delete id="del" parameterType="String">
+		DELETE FROM fileList WHERE uuid=#{FileId}
+	</delete>
+
 <!-- TODO: mapper-->
 
 </mapper>

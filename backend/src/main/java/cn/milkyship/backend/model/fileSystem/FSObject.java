@@ -12,10 +12,10 @@ package cn.milkyship.backend.model.fileSystem;
 
 public class FSObject {
 	
-	private int id;
+	private String id;
 	private String fileName;
-	private int owner;
-	private int parent;
+	private String owner;
+	private String parent;
 	private String filePath;
 	
 	public FSObject(){};
@@ -28,11 +28,11 @@ public class FSObject {
 		this.filePath = fsObject.filePath;
 	}
 	
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 	
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	
@@ -44,19 +44,19 @@ public class FSObject {
 		this.fileName = fileName;
 	}
 	
-	public int getOwner() {
+	public String getOwner() {
 		return owner;
 	}
 	
-	public void setOwner(int owner) {
+	public void setOwner(String owner) {
 		this.owner = owner;
 	}
 	
-	public int getParent() {
+	public String getParent() {
 		return parent;
 	}
 	
-	public void setParent(int parent) {
+	public void setParent(String parent) {
 		this.parent = parent;
 	}
 	
