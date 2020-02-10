@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="jdbc" uuid="1e94e43a-50d1-4365-aee7-d4695f6d4103">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>jdbc.properties
+
+D:/Myproject/netdisk/backend/src/main/resources/jdbc.properties</remarks>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://49.233.130.58:3306/netdisk?useUnicode=true&amp;characterEncoding=utf8</jdbc-url>
+    </data-source>
+  </component>
+</project>
