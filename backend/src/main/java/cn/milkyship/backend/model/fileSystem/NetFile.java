@@ -9,6 +9,7 @@ package cn.milkyship.backend.model.fileSystem;
  * @author 徐云凯
  * @version v1.0
  */
+
 public class NetFile extends FSObject {
 	
 	private String MD5;
