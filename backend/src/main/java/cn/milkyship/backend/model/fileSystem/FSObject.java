@@ -10,9 +10,6 @@ package cn.milkyship.backend.model.fileSystem;
  * @version v1.0
  */
 
-import java.lang.reflect.Array;
-import java.util.List;
-
 public class FSObject {
 	
 	private int id;

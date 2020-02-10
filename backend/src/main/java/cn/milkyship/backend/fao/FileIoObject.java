@@ -33,6 +33,7 @@ public class FileIoObject extends BaseFao{
 		}
 		
 		// QUEST!!! 能一次性创建所有目录？
+		//TODO：处理文件加锁
 		File file = new File(filePath + MD5);
 		try{
 			multipartFile.transferTo(file);
@@ -50,6 +51,7 @@ public class FileIoObject extends BaseFao{
 		String fileMD5 = file.getMD5();
 		StringBuilder filePath = new StringBuilder(FileRootPath);
 		
+		//TODO：处理文件加锁
 		for(int i = 0; i < fileMD5.length(); i += HashBreakLength){
 			filePath.append(fileMD5.substring(i, i + HashBreakLength)).append("/");
 		}

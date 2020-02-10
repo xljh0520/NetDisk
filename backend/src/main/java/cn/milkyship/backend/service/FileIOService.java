@@ -16,8 +16,10 @@ public class FileIOService {
 	
 	@Autowired
 	private FileDao fileDao;
+	@Autowired
 	private FileIoObject fileIoObject;
 	
+	//TODO：处理文件加锁时的错误
 	public int upload(MultipartFile file, String MD5){
 		if(file.isEmpty())
 			return 1;

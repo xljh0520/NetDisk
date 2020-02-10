@@ -1,5 +1,8 @@
 package cn.milkyship.backend.controller;
 
+import cn.milkyship.backend.service.FileIOService;
+import cn.milkyship.backend.service.FileManageService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 /*
@@ -15,5 +18,11 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class FileController {
 
+	@Autowired
+	private FileIOService fileIOService;
+	@Autowired
+	private FileManageService fileManageService;
+	
+	
 
 }
