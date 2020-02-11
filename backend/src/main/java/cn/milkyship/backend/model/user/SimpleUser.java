@@ -1,6 +1,6 @@
 package cn.milkyship.backend.model.user;
 
-import java.sql.Date;
+import java.util.Date;
 
 /*
  * <p>项目名称: backend </p>
@@ -11,7 +11,6 @@ import java.sql.Date;
  * @author 徐云凯 FJH
  * @version v1.0
  */
-
 public class SimpleUser extends User {
     private String userName;
     private String userSex;

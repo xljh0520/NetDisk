@@ -10,28 +10,28 @@ package cn.milkyship.backend.model.user;
  * @version v1.0
  */
 public abstract class User {
-    private int id;
-    private int profilePhoto;
+    private String uuid;
+    private String profilePhoto;
     private int rootDir;
 
-    public int getId() {
-        return id;
+    public String getUuid() {
+        return uuid;
     }
 
-    public int getProfilePhoto() {
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
+    }
+
+    public String getProfilePhoto() {
         return profilePhoto;
+    }
+
+    public void setProfilePhoto(String profilePhoto) {
+        this.profilePhoto = profilePhoto;
     }
 
     public int getRootDir() {
         return rootDir;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setProfilePhoto(int profilePhoto) {
-        this.profilePhoto = profilePhoto;
     }
 
     public void setRootDir(int rootDir) {
