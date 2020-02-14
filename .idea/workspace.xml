@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dab19d2a-15e5-47e9-90a0-3ffeb9c8604a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/cn/milkyship/backend/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/cn/milkyship/backend/BackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/cn/milkyship/backend/dao/FileDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/cn/milkyship/backend/dao/FileDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/cn/milkyship/backend/model/fileSystem/FSObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/cn/milkyship/backend/model/fileSystem/FSObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/cn/milkyship/backend/model/user/SimpleUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/cn/milkyship/backend/model/user/SimpleUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/cn/milkyship/backend/service/FileIOService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/cn/milkyship/backend/service/FileIOService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/cn/milkyship/backend/service/FileManageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/cn/milkyship/backend/service/FileManageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1e94e43a-50d1-4365-aee7-d4695f6d4103.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1e94e43a-50d1-4365-aee7-d4695f6d4103.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/resources/Mapper/FileManageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/Mapper/FileManageMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/frontend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netdisk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/netdisk.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

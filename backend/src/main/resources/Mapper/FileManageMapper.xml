@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.milkyship.backend.FileManageMapper">
+<mapper namespace="com.milkyship.backend.dao.FileDao">
 
 	<resultMap id="modelTypeMap" type="com.milkyship.backend.model.fileSystem.FSObject">
 		<discriminator javaType="java.lang.Boolean" column="isDir">
-			<case value="true" resultType="com.milkyship.backend.model.fileSystem.NetDirectory"/>
-			<case value="false" resultType="com.milkyship.backend.model.fileSystem.NetFile"/>
+			<case value="1" resultMap="file2NetDirectory"/>
+			<case value="0" resultMap="file2NetFile"/>
 		</discriminator>
+	</resultMap>
+
+	<resultMap id="file2FSObject" type="com.milkyship.backend.model.fileSystem.FSObject">
+		<id column="uuid" jdbcType="varchar" property="id"/>
+		<result column="fileName" jdbcType="varchar" property="fileName"/>
+		<result column="owner" jdbcType="varchar" property="owner"/>
+		<result column="parent" jdbcType="varchar" property="parent"/>
+		<result column="filePath" jdbcType="varchar" property="filePath"/>
+	</resultMap>
+
+	<resultMap id="file2NetFile" type="com.milkyship.backend.model.fileSystem.NetFile">
+		<id column="uuid" jdbcType="varchar" property="id"/>
+		<result column="fileName" jdbcType="varchar" property="fileName"/>
+		<result column="owner" jdbcType="varchar" property="owner"/>
+		<result column="parent" jdbcType="varchar" property="parent"/>
+		<result column="filePath" jdbcType="varchar" property="filePath"/>
+		<result column="MD5" jdbcType="varchar" property="MD5"/>
+	</resultMap>
+
+	<resultMap id="file2NetDirectory" type="com.milkyship.backend.model.fileSystem.NetDirectory">
+		<id column="uuid" jdbcType="varchar" property="id"/>
+		<result column="fileName" jdbcType="varchar" property="fileName"/>
+		<result column="owner" jdbcType="varchar" property="owner"/>
+		<result column="parent" jdbcType="varchar" property="parent"/>
+		<result column="filePath" jdbcType="varchar" property="filePath"/>
 	</resultMap>
 
 	<select id="isDir" resultType="int">
@@ -27,6 +52,24 @@
 		DELETE FROM fileList WHERE uuid=#{FileId}
 	</delete>
 
-<!-- TODO: mapper-->
+	<select id="find" parameterType="String" resultMap="file2FSObject">
+		SELECT * FROM fileList WHERE uuid=#{FSObjId}
+	</select>
+
+	<select id="findDir" parameterType="String" resultMap="file2NetDirectory">
+		SELECT * FROM fileList WHERE uuid=#{DirId}
+	</select>
+
+	<select id="findFile" parameterType="String" resultMap="file2NetFile">
+		SELECT * FROM fileList WHERE uuid=#{FileId}
+	</select>
+
+	<select id="findChildrenDir" parameterType="String" resultMap="file2NetDirectory">
+		SELECT * FROM fileList WHERE parent=#{FSObjectId} and isDir=1
+	</select>
+
+	<select id="findChildrenFile" parameterType="String" resultMap="file2NetFile">
+		SELECT * FROM fileList WHERE parent=#{FSObjectId} and isDir=0
+	</select>
 
 </mapper>

@@ -916,120 +916,140 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="232" parent="227" name="fileName">
+    <column id="232" parent="227" name="uuid">
       <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="233" parent="227" name="fileName">
+      <Position>3</Position>
       <Comment>文件名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="233" parent="227" name="owner">
-      <Position>3</Position>
+    <column id="234" parent="227" name="owner">
+      <Position>4</Position>
       <Comment>所有人在用户表中的id</Comment>
-      <DataType>int(255)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="234" parent="227" name="MD5">
-      <Position>4</Position>
+    <column id="235" parent="227" name="MD5">
+      <Position>5</Position>
       <Comment>文件hash，使用md5算法，目录为null</Comment>
       <DataType>varchar(32)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="227" name="parent">
-      <Position>5</Position>
+    <column id="236" parent="227" name="parent">
+      <Position>6</Position>
       <Comment>文件的父节点的id，NULL时为根目录</Comment>
-      <DataType>int(255)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="227" name="filePath">
-      <Position>6</Position>
+    <column id="237" parent="227" name="filePath">
+      <Position>7</Position>
       <Comment>文件在用户文件目录体系中的绝对路径，包含自身名称。目录以‘/’结尾，文件以自身文件名结尾。</Comment>
       <DataType>varchar(1024)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="237" parent="227" name="isDir">
-      <Position>7</Position>
+    <column id="238" parent="227" name="isDir">
+      <Position>8</Position>
       <Comment>是否为目录，是为1，否为0</Comment>
-      <DataType>char(1)|0s</DataType>
+      <DataType>int(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
-      <Collation>ascii_bin</Collation>
     </column>
-    <key id="238" parent="227" name="PRIMARY">
+    <key id="239" parent="227" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>id
+uuid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="239" parent="228" name="id">
+    <column id="240" parent="228" name="id">
       <Position>1</Position>
-      <DataType>int(10) unsigned|0s</DataType>
+      <DataType>int(10)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="240" parent="228" name="groupName">
+    <column id="241" parent="228" name="uuid">
       <Position>2</Position>
+      <DataType>varchar(32)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="242" parent="228" name="groupName">
+      <Position>3</Position>
       <Comment>群名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_bin</Collation>
     </column>
-    <column id="241" parent="228" name="numMembers">
-      <Position>3</Position>
+    <column id="243" parent="228" name="numMembers">
+      <Position>4</Position>
       <Comment>群成员数量</Comment>
       <DataType>int(255) unsigned zerofill|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="242" parent="228" name="numFiles">
-      <Position>4</Position>
+    <column id="244" parent="228" name="numFiles">
+      <Position>5</Position>
       <Comment>群分享文件数量</Comment>
       <DataType>int(255) unsigned zerofill|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="243" parent="228" name="profilePhoto">
-      <Position>5</Position>
+    <column id="245" parent="228" name="profilePhoto">
+      <Position>6</Position>
       <Comment>群头像在头像表中的id</Comment>
-      <DataType>int(255) unsigned|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="244" parent="228" name="rootDir">
-      <Position>6</Position>
+    <column id="246" parent="228" name="rootDir">
+      <Position>7</Position>
       <Comment>群分享文件夹根目录在文件表中的id</Comment>
-      <DataType>int(255)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="245" parent="228" name="PRIMARY">
+    <key id="247" parent="228" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id
-groupName</ColNames>
+groupName
+uuid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="246" parent="229" name="id">
+    <column id="248" parent="229" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="247" parent="229" name="image">
+    <column id="249" parent="229" name="uuid">
       <Position>2</Position>
+      <DataType>varchar(32)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="250" parent="229" name="image">
+      <Position>3</Position>
       <Comment>头像图片的二进制存储</Comment>
       <DataType>mediumblob|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="248" parent="229" name="PRIMARY">
+    <key id="251" parent="229" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>id
+uuid</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="249" parent="230" name="id">
+    <column id="252" parent="230" name="id">
       <Position>1</Position>
       <Comment>用户id</Comment>
       <DataType>int(8) unsigned|0s</DataType>
@@ -1037,8 +1057,14 @@ groupName</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="230" name="userName">
+    <column id="253" parent="230" name="uuid">
       <Position>2</Position>
+      <DataType>varchar(32)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="254" parent="230" name="userName">
+      <Position>3</Position>
       <Comment>用户名（昵称）</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1046,44 +1072,45 @@ groupName</ColNames>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_bin</Collation>
     </column>
-    <column id="251" parent="230" name="profilePhoto">
-      <Position>3</Position>
+    <column id="255" parent="230" name="profilePhoto">
+      <Position>4</Position>
       <Comment>用户头像在头像表中的id</Comment>
       <DataType>int(255) unsigned|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="230" name="userSex">
-      <Position>4</Position>
+    <column id="256" parent="230" name="userSex">
+      <Position>5</Position>
       <Comment>用户性别</Comment>
       <DataType>varchar(16)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_bin</Collation>
     </column>
-    <column id="253" parent="230" name="userBirth">
-      <Position>5</Position>
+    <column id="257" parent="230" name="userBirth">
+      <Position>6</Position>
       <Comment>用户出生日期</Comment>
       <DataType>date|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="230" name="accountType">
-      <Position>6</Position>
+    <column id="258" parent="230" name="accountType">
+      <Position>7</Position>
       <Comment>账户类型</Comment>
       <DataType>varchar(16)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
       <Collation>utf8_bin</Collation>
     </column>
-    <column id="255" parent="230" name="rootDir">
-      <Position>7</Position>
+    <column id="259" parent="230" name="rootDir">
+      <Position>8</Position>
       <Comment>用户文件目录根文件夹在文件表中的id</Comment>
-      <DataType>int(255)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="256" parent="230" name="PRIMARY">
+    <key id="260" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id
-userName</ColNames>
+userName
+uuid</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>
