@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dab19d2a-15e5-47e9-90a0-3ffeb9c8604a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1e94e43a-50d1-4365-aee7-d4695f6d4103.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1e94e43a-50d1-4365-aee7-d4695f6d4103.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/cn/milkyship/backend/BackendFileApiTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/Mapper/FileManageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/Mapper/FileManageMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/cn/milkyship/backend/controller/FileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/cn/milkyship/backend/controller/FileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/test/java/cn/milkyship/backend/BackendApplicationTests.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,13 +75,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="BackendFileApiTest.testFileController" />
+    </enabled-run-configurations>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -133,7 +139,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.BackendFileApiTest.testFileController">
+    <configuration name="BackendFileApiTest.testFileController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend" />
+      <option name="PACKAGE_NAME" value="cn.milkyship.backend" />
+      <option name="MAIN_CLASS_NAME" value="cn.milkyship.backend.BackendFileApiTest" />
+      <option name="METHOD_NAME" value="testFileController" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="cn.milkyship.backend.BackendApplication" />
@@ -143,6 +159,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BackendFileApiTest.testFileController" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
