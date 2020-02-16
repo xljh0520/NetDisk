@@ -43,8 +43,8 @@ public class BackendFileApiTest {
 		// 测试FileController
 		RequestBuilder request = null;
 		
-		// 1、get查一下某目录下的file列表，应该为空
-		request = get("/file/test/123");
+		// 1、get查一下某目录下的file列表,/test/后面的是get请求参数
+		request = get("/file/test/test123");
 		mvc.perform(request)
 				.andExpect(status().isOk())
 				.andExpect(content().string(equalTo("[{\"id\":\"id123\",\"fileName\":\"abcTstFile.txt\",\"owner\":\"owner123\",\"parent\":\"parent123\",\"filePath\":\"/root/data/\"}]")));

@@ -33,7 +33,7 @@ public class FileManageService {
 		netDirectory.setOwner(parent.getOwner());
 		netDirectory.setFilePath(parent.getFilePath() + parent.getFileName() + '/');
 		
-		return fileDao.add(netDirectory);
+		return netDirectory.getId();
 	}
 	
 	public List<FSObject> findChild( String ManipulatedFileId){
@@ -53,6 +53,7 @@ public class FileManageService {
 	}
 	
 	public String cut(String ManipulatedFileId, String targetDirId){
+		// 验证目标位置为文件夹而不是文件
 		if(fileDao.isDir(targetDirId)==0){return "";}
 		String re = copy(ManipulatedFileId, targetDirId);
 		del(ManipulatedFileId);
@@ -69,6 +70,7 @@ public class FileManageService {
 	 * @datetime  2020/2/6 14:39
 	 */
 	public String copy(String ManipulatedFileId, String targetDirId){
+		// 验证目标位置为文件夹而不是文件
 		if(fileDao.isDir(targetDirId)==0){return null;}
 		
 		String ownerId = fileDao.findDir(targetDirId).getOwner();
@@ -97,9 +99,12 @@ public class FileManageService {
 		}
 		else{   //被复制对象为文件
 			NetFile file = fileDao.findFile(ManipulatedFileId);
+			String uuid = UUID.randomUUID().toString();
+			file.setId(uuid.replaceAll("-", ""));
 			file.setParent(targetDirId);
 			file.setOwner(ownerId);
-			return fileDao.add(file);
+			fileDao.add(file);
+			return file.getId();
 		}
 	}
 

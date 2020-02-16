@@ -33,7 +33,7 @@ public class FileController {
 	@RequestMapping(value="/test/{id}", method= RequestMethod.GET)
 	public List<FSObject> test(@PathVariable String id) {
 		FSObject fsObject = new FSObject();
-		fsObject.setId("id123");
+		fsObject.setId(id);
 		fsObject.setFileName("abcTstFile.txt");
 		fsObject.setOwner("owner123");
 		fsObject.setParent("parent123");

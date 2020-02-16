@@ -14,9 +14,9 @@ public interface FileDao {
 
 	public int isDir(String FSObjId);
 	
-	public String add(NetDirectory dir);
+	public void add(NetDirectory dir);
 	
-	public String add(NetFile file);
+	public void add(NetFile file);
 	
 	public void del(String FileId);
 	
