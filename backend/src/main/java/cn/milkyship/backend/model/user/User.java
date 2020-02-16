@@ -10,6 +10,7 @@ package cn.milkyship.backend.model.user;
  * @version v1.0
  */
 public abstract class User {
+    
     private String uuid;
     private String profilePhoto;
     private int rootDir;
